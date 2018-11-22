@@ -17,7 +17,9 @@ module.exports = (app) => {
     })
 
     app.get('/api/current_user', (req, res) => {
-       res.send(req.session);
-        // res.send(req.user);
+        res.send(req.user);
     });
+    app.get('/', (req, res) => {
+        res.send("This is the home page!");
+    })
 };
